@@ -211,7 +211,7 @@ def main():
     settings.update(extra)
 
     try:
-        with open(json_file, 'w') as f:
+        with open(json_file, 'w', encoding='utf-8') as f:
             json.dump(settings, f, ensure_ascii=False)
     except PermissionError:
         warnings.warn('can not write to the json file:{}'.format(json_file))
